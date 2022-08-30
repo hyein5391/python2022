@@ -16,8 +16,11 @@ koreaIT
       
     ★ 문자열[슬라이싱]
     s = 'monty python'
-    print(s[0:4]) #mont
+    print(s[0:4]) #mont 4는 0보다 크고 x 4보다는 작다는 의미
     
     print(s[6:7]) #p
     
-    print(s[6:20]) #python
+    print(s[:]) #생략을 하면 전부 나타난다
+    # 문자열에서 <크고 > 작다는 의미는 알파벳 순이다 문자는 특수기호도 포함한다\
+    null 은 문자로 서의 0을 의미함
+    .
