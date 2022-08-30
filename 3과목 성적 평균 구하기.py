@@ -1,4 +1,4 @@
-def ok(ko, math, en,count):
+def ok(ko, math, en):
     calc = ko+math+en
     mean = calc /3
     result = round(mean,1)
@@ -44,7 +44,7 @@ while True:
     
 
         if(0 < result_ko <=100) and ( 0< result_math <=100) and (0< result_en <=100) :
-          ok(result_zork,result_math, result_en)
+          ok(result_ko,result_math, result_en)
           break
 
         else: # 범위 밖의 경우 오류 출력
