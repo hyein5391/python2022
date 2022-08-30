@@ -1,6 +1,23 @@
 # python2022
 koreaIT
 2022-08-30 금일의 학습내용
-  ● 깃허브를 이용하여 학습한 내용을 온라인상의 리파지토리(저장장소)에 업로드함
-  ● len[내장함수] index[내장함수] Split[자주사용하는 용어] 
-  ● Str내장 함수에는 upper[일괄적으로 대문자로 만들어주는 함수] lower[일괄적으로 대문자로 만들어주는 함수]
+    ● 깃허브를 이용하여 학습한 내용을 온라인상의 리파지토리(저장장소)에 업로드함
+    ● len[내장함수] index[내장함수] Split[자주사용하는 용어] 
+    ● Str내장 함수에는 upper[일괄적으로 대문자로 만들어주는 함수] lower[일괄적으로 대문자로 만들어주는 함수]
+    
+    
+    ★ 루프와 개수 세기
+    word = 'nanana'
+    count = 0
+    for letter in word :
+      if letter == 'a':
+        count = count +1
+      print(count)
+      
+    ★ 문자열[슬라이싱]
+    s = 'monty python'
+    print(s[0:4]) #mont
+    
+    print(s[6:7]) #p
+    
+    print(s[6:20]) #python
