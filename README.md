@@ -55,3 +55,18 @@ find() 하위 문자열의 첫번째로 나타나는 위치를 검색
 REPLACE 함수는 특정 언어를 찾아서 교체 해주는 언어
 
 #파싱과 추출
+
+def func(s) : #s : ' gooD moring' ==> 'Good Morning'
+    str = s.split(' ') # split : 구분자로 구분된 문자열 배열을 되돌려 준다
+    print(str)
+    ret =''
+    for s1 in str :
+        ss1 = s1.lower()
+        ss2 = ss1[0].upper() + ss1[1:]
+        ret = ret + ' '+ ss2
+    return ret
+print(ret)
+x = input('영어 문장을 입력하세요 : ')
+func(x)
+
+
