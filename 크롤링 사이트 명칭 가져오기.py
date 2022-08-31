@@ -15,7 +15,7 @@ print(f'Site 이름 : {s1}')
 #------------------------------------------------------------------------------------------
 url = '문자코드 value : 50 : 문자 :[2]'
 def crawling(s) : 
-    if s.find('://') == -1:     # //가 없다면 -1 오류를 내며 return에서 No site 출력하여 돌아감
+    if s.find('://') == -1:     # -1 오류를 내며 return에서 No site 출력하여 돌아감
         return 'No Site'        #입력 문자열이 url 이 아니라면 ' No Site' 반환 하여 준다
     x = s.split('/')            #'/' 를 구문 하여 분해 한다 /를 기준으로 좌우 분해
     #print(x)        
@@ -30,7 +30,7 @@ print(f'Site 이름 : {s1}')
 #-------------------------------------------------------------------------------------------
 url = "https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=smilecat007&logNo=220860851649"
 def crawling(s) : 
-    if s.find('://') == -1:     # //가 없다면 -1 오류를 내며 return에서 No site 출력하여 돌아감
+    if s.find('://') == -1:     # -1 오류를 내며 return에서 No site 출력하여 돌아감
         return 'No Site'        #입력 문자열이 url 이 아니라면 ' No Site' 반환 하여 준다
     x = s.split('/')            #'/' 를 구문 하여 분해 한다 /를 기준으로 좌우 분해
     #print(x)        
