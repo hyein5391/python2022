@@ -69,4 +69,5 @@ print(ret)
 x = input('영어 문장을 입력하세요 : ')
 func(x)
 
-
+내장함수 자주 사용하는것
+type(),float() int() print(),input()
