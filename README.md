@@ -90,3 +90,10 @@ s
 # str.lower , upper, strip 스트립 함수 lstrip 과 rstrip 두가지 [lstrip <--- 왼쪽 공백 rstrip <-----오른쪽 공백만들때 사용]
 
 
+
+# URL 관련 : 아래의 예시와 같은 URL에서 web site 명을 추출하고 콘텐츠 명을 제출 하세요[크롤링 함수를 사용하여]
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=smilecat007&logNo=220860851649
+
+
+
+
