@@ -1,5 +1,5 @@
 url = "https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=smilecat007&logNo=220860851649"
-url = '문자코드 value : 50 : 문자 :[2]'
+# url = '문자코드 value : 50 : 문자 :[2]'
 def crawling(s) :      #함수의 가장 큰 역활은 #url 을 문자열로 받아서 구문분석을 통해 Site 명을 추출하여 반환 한다
                         #https <--- s가 붙을 경우는 디도스 공격을 쉽게 못하게 하기위해 인증을 해야만 할수있게 인증서로 방어하는 기능
     x = s.split('/')   #def 을 인식하며 들여쓰기한 부분의 전체적인걸 지나 크롤링이란 변수명으로 불러옴 url을
