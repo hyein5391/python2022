@@ -89,3 +89,4 @@ s
 # find 함수 존재 하는 문자열을 찾아주는 함수 없을 경우 -1로 표기
 # str.lower , upper, strip 스트립 함수 lstrip 과 rstrip 두가지 [lstrip <--- 왼쪽 공백 rstrip <-----오른쪽 공백만들때 사용]
 
+
