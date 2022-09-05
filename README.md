@@ -188,7 +188,9 @@ def get_PZ(s) : # /PZ 옵션을 인수로 받아서 옵션의 값을 x,y,w,h 리
 # PZ.h = 100
 # FILE = test.py
 
-st0 = 'PS:121 /PZ:2,3,100,100 /FILE=c:\\test.py'
+
+
+st0 = '/PS:121 /PZ:2,3,100,100 /FILE=c:\\test.py'
 st1 = '/PZ:2,3,100,100 /PS:121 /FILE=c:\\test.py'
 st2 = '/FILE=c:\\test.py /PS:121 /PZ:2,3,100,100'
 
@@ -198,6 +200,15 @@ def get_PS(s):                   #PS 옵션을 인수로 받아서 옵션의 값
 def get_PZ(s):                   #/PZ 옵션을 인수로 받아서 옵션으 ㅣ값을
     x = s.split(':')            # x,y,w,h,리스트로 리턴, s=/PZ 2,3,10,100
     y = x[1].split(',')
-    return(y)                   # y = ['2', '3', '100', '100' ]                     #리스트로 돌려줄수 있도록 y의 값을 이중 split을 사용하였다
+    return(y)                   # y = ['2', '3', '100', '100' ]
+#--------------------------------------------------------------------------------------------
+def get_FILE(s) :            # /FILE 윱션을 인수로 받아서 옵션의 값을 리턴. 단, 구분자는'='
+    x = s.split('=')
+    return(x[1])
 
-def get_FILE(s)             # /FILE 윱션을 인수로 받아서 옵션의 값을 리턴. 단, 구분자는'='
+
+def Main() : # 옵션 해석 프로그램 메인 루틴
+    s = st0.split('/')
+    a = get_PS(s[1])
+    print(f"  PS:  {a}")              #f 포멧
+Main()
