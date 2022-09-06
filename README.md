@@ -260,3 +260,5 @@ while True :
     numlist.append(value)
 average = sum(numlist) / len(numlist)
 print('Average: ', average)
+
+
