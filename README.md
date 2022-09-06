@@ -328,4 +328,4 @@ d=list(b)
 for i in range(10):
     for j in range (len(list(b.items()))):
         if c[i]==list(b.items())[j][1]:
-            print(list(b.items())[j][0], list(b.items())[j][1])
+            print(list(b.items())[j][0], list(b.items())[j][1])ㅇ
