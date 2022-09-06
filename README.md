@@ -222,7 +222,6 @@ t = [ 1, 2, 3, 4, 5,6, 7, 8, 9] 유한 리스트
 >>> some = [1,2,3,4,5,6,7]
 >>> 9 in some 이라 할때 리스트 안에 지정한 숫자가 들어가 있지 않을때 T or F 로 나타낸다
 
-
 자주 사용 하는 함수 언어
 insert() 데이터를 중간에 끼워넣고 싶을때 사용
 len() 리스트 내 원소 갯수 크기 반환
@@ -234,3 +233,28 @@ range() 0부터 시작하여 1씩 늘어남 ( 어디부터  , 어디어디까지
 #--------------------------------------------------------------------------------------------
 sort : 정렬
 swap : 서로 바꾸어줌 [솔트과 스왑을 구현하시오] 함수를 사용하지말고 
+
+
+
+
+
+#-----------------------------------------------------------------------------------------------
+total = 0
+count = 0
+while True :
+    inp = input('Enter a number :')
+    if inp == 'done' : break #한개의 명령어는 한줄로 작성이 가능하다
+    value = float(inp)
+    total = total +  value
+    count = count + 1
+average = total / count
+print('average:', average)
+#-------------------------------------------------------------------------------------------------
+numlist = list()
+while True :
+    inp = input('Enter a number:')
+    if inp == 'done' : break
+    value = float(inp)
+    numlist.append(value)
+average = sum(numlist) / len(numlist)
+print('Average: ', average)
