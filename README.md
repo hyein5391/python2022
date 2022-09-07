@@ -338,5 +338,6 @@ https://kingofbackend.tistory.com/92
 #계산기 프로그래머 
 HEX : 16진수
 DEC : 10진수
-BIN : 2
+BIN : 2진수
+아스키 코드는 특수 문자 + 영 숫 해서 0~127개 까지 있고 7bit 체제이다 bit단위는 2진수 를 타나낸다
 
