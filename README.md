@@ -333,3 +333,11 @@ Main()
             
             
 https://kingofbackend.tistory.com/92
+
+
+![Uploading image.png…]()
+
+HEX : 16진수
+DEC : 10진수
+BIN : 2
+
