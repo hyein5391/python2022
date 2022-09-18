@@ -345,6 +345,37 @@ BIN : 2진수   #127 입력시 1한개당 비트 라고 이야기 한
 
 
 #=========================================================================================================
-과제 : Text File 만든후
-한줄씩 읽어서 file 전체의 단어를 분리하고 겹치는 단어를 나타내는 pict를 출력하시오
+아스키 코드를 파이썬으로 만들기
+
+나의 현 해답은  무식함으로 일단 만들기
+for문으로 돌려 놓아보자
+
+import pandas as  pd
+def df_maker(col_num, ind_num, fill):
+    col = []
+    ind = []
+    con = []
+    for i in range(0,col_num):
+        col.append(fill)
+    for i in range(0,ind_num):
+        ind.append(fill)
+    for i in range(0,ind_num):
+        con.append(col)
+    return pd.DataFrame(con, columns=col, index=ind)
+df = df_maker(11,32,0)
+col = ["16진a","문자a","10진a","16진b","문자b","10진b","16진c","문자c","10진c","16진d","문자d"]
+ind = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+df.columns = col
+df.index = ind
+df["16진a"] = [hex(0),hex(1),hex(2),hex(3),hex(4),hex(5),hex(6),hex(7),hex(8),hex(9),hex(10),hex(11),hex(12),hex(13),hex(14),hex(15),hex(16),hex(17),hex(18),hex(19),hex(20),hex(21),hex(22),hex(23),hex(24),hex(25),hex(26),hex(27),hex(28),hex(29),hex(30),hex(31)]
+df["10진a"] = [32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63]
+df["16진b"] = [hex(32),hex(33),hex(34),hex(35),hex(36),hex(37),hex(38),hex(39),hex(40),hex(41),hex(42),hex(43),hex(44),hex(45),hex(46),hex(47),hex(48),hex(49),hex(50),hex(51),hex(52),hex(53),hex(54),hex(55),hex(56),hex(57),hex(58),hex(59),hex(60),hex(61),hex(62),hex(63)]
+df["문자b"] = [chr(32),chr(33),chr(34),chr(35),chr(36),chr(37),chr(38),chr(39),chr(40),chr(41),chr(42),chr(43),chr(44),chr(45),chr(46),chr(47),chr(48),chr(49),chr(50),chr(51),chr(52),chr(53),chr(54),chr(55),chr(56),chr(57),chr(58),chr(59),chr(60),chr(61),chr(62),chr(63)]
+df["10진b"] = [64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95]
+df["16진c"] = [hex(64),hex(65),hex(66),hex(67),hex(68),hex(69),hex(70),hex(71),hex(72),hex(73),hex(74),hex(75),hex(76),hex(77),hex(78),hex(79),hex(80),hex(81),hex(82),hex(83),hex(84),hex(85),hex(86),hex(87),hex(88),hex(89),hex(90),hex(91),hex(92),hex(93),hex(94),hex(95)]
+df["문자c"] = [chr(64),chr(65),chr(66),chr(67),chr(68),chr(69),chr(70),chr(71),chr(72),chr(73),chr(74),chr(75),chr(76),chr(77),chr(78),chr(79),chr(80),chr(81),chr(82),chr(83),chr(84),chr(85),chr(86),chr(87),chr(88),chr(89),chr(90),chr(91),chr(92),chr(93),chr(94),chr(95)]
+df["10진c"] = [96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127]
+df["16진d"] = [hex(96),hex(97),hex(98),hex(99),hex(100),hex(101),hex(102),hex(103),hex(104),hex(105),hex(106),hex(107),hex(108),hex(109),hex(110),hex(111),hex(112),hex(113),hex(114),hex(115),hex(116),hex(117),hex(118),hex(119),hex(120),hex(121),hex(122),hex(123),hex(124),hex(125),hex(126),hex(127)]
+df["문자d"] = [chr(96),chr(97),chr(98),chr(99),chr(100),chr(101),chr(102),chr(103),chr(104),chr(105),chr(106),chr(107),chr(108),chr(109),chr(110),chr(111),chr(112),chr(113),chr(114),chr(115),chr(116),chr(117),chr(118),chr(119),chr(120),chr(121),chr(122),chr(123),chr(124),chr(125),chr(126),chr(127)]
+df
 
