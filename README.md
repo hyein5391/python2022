@@ -379,3 +379,62 @@ df["16진d"] = [hex(96),hex(97),hex(98),hex(99),hex(100),hex(101),hex(102),hex(1
 df["문자d"] = [chr(96),chr(97),chr(98),chr(99),chr(100),chr(101),chr(102),chr(103),chr(104),chr(105),chr(106),chr(107),chr(108),chr(109),chr(110),chr(111),chr(112),chr(113),chr(114),chr(115),chr(116),chr(117),chr(118),chr(119),chr(120),chr(121),chr(122),chr(123),chr(124),chr(125),chr(126),chr(127)]
 df
 
+
+
+
+#============================================================================================================================================================
+DB Browser(SQlite)
+
+
+CREATE TABLE "UserData" (
+	"CODE" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	"NAME" TEXT NOT NULL,
+	"BUY" TEXT
+	)
+
+ALTER TABLE UserData add "PAID" INTEGER;
+ALTER TABLE UserData add "ADDRESS" TEXT;
+
+ALTER TABLE UserData DROP "ADDRESS";
+
+INSERT INTO UserData(NAME, PAID) VALUES ("K", 503300);
+INSERT INTO UserData(NAME, BUY, PAID) VALUES ("A", "NS", 353300);
+INSERT INTO UserData(NAME, PAID) VALUES ("B", 1500000);
+INSERT INTO UserData(NAME, PAID) VALUES ("C", 703000);
+INSERT INTO UserData(NAME, PAID) VALUES ("D", 900000);
+INSERT INTO UserData(NAME, BUY) VALUES ("N", "LP Player");
+
+UPDATE UserData SET BUY = "Laptop" WHERE name = "K";
+UPDATE UserData SET CODE = 2 WHERE name = "N";
+UPDATE UserData SET BUY = "iPhone14" WHERE name = "B";
+UPDATE UserData SET BUY = "MicroWave" WHERE name = "C";
+UPDATE UserData SET BUY = "SmartTV" WHERE name = "D";
+UPDATE UserData SET PAID = 370000 WHERE BUY = "LP Player";
+
+DELETE FROM UserData WHERE ROWID = 2;
+
+SELECT * FROM UserData ORDER by PAID DESC;
+
+INSERT INTO ProData(ProductName, Price) VALUES ("Laptop", 500000);
+INSERT INTO ProData(ProductName, Price) VALUES ("NS", 350000);
+INSERT INTO ProData(ProductName, Price) VALUES ("iPhone14", 1500000);
+INSERT INTO ProData(ProductName, Price) VALUES ("MicroWave", 700000);
+INSERT INTO ProData(ProductName, Price) VALUES ("LP Player", 370000);
+INSERT INTO ProData(ProductName, Price) VALUES ("SmartTV", 900000);
+
+SELECT * FROM UserData JOIN ProData;
+SELECT CODE, name, ProData.ProductName, PAID FROM UserData JOIN ProData on ProData.ProductName = UserData.BUY;
+
+INSERT INTO ProData(ProductName, Price) VALUES ("ABC", 370000);
+INSERT INTO ProData(ProductName, Price) VALUES ("BCDE", 900000);
+
+DELETE FROM ProData WHERE ProductName like "%B%";
+
+
+
+
+
+
+
+
+
